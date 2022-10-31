@@ -14,7 +14,13 @@ In this project, I haven't captured those set of images manually. Instead, I hav
 
 Coming to the pose estimation, we call these callibaration parameters and store it in different variables first. Whenever an marker gets detected in a frame, we find the number of markers detected in the frame and iterate through each to estimate it's pose. We detect the id of the detected marker as explained above, and display it on the frame using putText function of Aruco library. Now we use the estimatePoseSingleMarkers function, which takes the marker size,corners, camera matrix, distance coefficient as parameters and returns 2 vectors: Rotational and Translational. These are just the transformation of any 3D point expressed in the chessboard coordinate system into the camera coordinate system. This helps us to find the pose accordingly. So, using this, we would now be drawing the pose of the marker in the frame using drawFrameAxes function of Aruco Library. This takes all the 4 parameters of camera callibration data along with the frame, and the length of thickness for drawing the pose. The output can be visualized by imshow function. It would look like the following image. 
 
+<img width="257" alt="id 0" src="https://user-images.githubusercontent.com/100789637/199054913-8b6072f2-2383-4a21-8f5c-684450cdefda.png">
 
+<img width="245" alt="id 1" src="https://user-images.githubusercontent.com/100789637/199054935-6363332a-de27-4669-98aa-b6092ffa9466.png">
+
+<img width="239" alt="id 5" src="https://user-images.githubusercontent.com/100789637/199054943-b15dd65e-7bb4-4827-b51c-fd1765904973.png">
+
+<img width="202" alt="id 15" src="https://user-images.githubusercontent.com/100789637/199054953-87bf78f1-2b5b-4238-9691-695163d15461.png">
 
 The line by line explanation of the code can be understood using the comments in the code.
 
